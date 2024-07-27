@@ -1,0 +1,56 @@
+header, nav, main, aside, footer{
+    background-color: antiquewhite;
+    border: 2px solid khaki;
+    margin: 15px;
+}
+
+aside .ad,.media{
+    padding: 50px;
+}
+
+header{
+    grid-area: header;
+}
+
+nav{
+    grid-area: nav;
+}
+
+main{
+    grid-area: main;
+}
+
+.ad{
+    grid-area: ad;
+}
+
+.media{
+    grid-area: media;
+}
+
+footer{
+    grid-area: footer;
+}
+
+.container{
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "nav main ad"
+    "nav main  media"
+    "footer footer footer";
+}
+
+/* for mobile responsive  */
+@media  screen and (max-width:576px) {
+    .container{
+        grid-template-areas: 
+        "header"
+        "nav"
+        "ad"
+        "media"
+        "main"
+        "footer"
+        ;
+    }
+}
